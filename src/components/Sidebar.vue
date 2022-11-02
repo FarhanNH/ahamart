@@ -1,8 +1,11 @@
 <template>
   <v-card max-width="250" height="100vh">
     <v-card-title>
-      <h3>SIDEBAR</h3>
+      <v-img :src="logoPath" contain max-height="40" max-width="90"></v-img>
     </v-card-title>
+    <v-card-subtitle>
+      <i>Version 0.12</i> <span style="color: #98654f">Beta</span>
+    </v-card-subtitle>
     <v-list dense>
       <v-list-group
         v-for="item in items"
@@ -86,6 +89,7 @@ export default {
         title: "Customer Service",
       },
     ],
+    logoPath: require("@/assets/logo_ahamart.png"),
   }),
 };
 </script>
