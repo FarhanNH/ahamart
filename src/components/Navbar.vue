@@ -14,8 +14,8 @@
           >
         </div>
       </v-col>
-      <v-col md="6" class="pb-0">
-        <div class="d-flex justify-end mt-1">
+      <v-col md="8" class="containerNav">
+        <div class="navAccount">
           <v-list dense width="250" max-width="250">
             <v-list-group
               v-for="item in items"
@@ -64,6 +64,16 @@ export default {
 </script>
 
 <style>
+.containerNav {
+  position: relative;
+  padding: 0;
+}
+.containerNav .navAccount {
+  position: absolute;
+  top: 1rem;
+  right: 6rem;
+}
+
 #customIcon {
   background-color: #eaecf3;
   border-radius: 50%;
