@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import Content from "./components/Content";
-import Navbar from "./components/Navbar.vue";
-import Sidebar from "./components/Sidebar.vue";
+import Content from './components/Content';
+import Navbar from './components/Navbar.vue';
+import Sidebar from './components/Sidebar.vue';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     Content,
@@ -28,14 +28,14 @@ export default {
 };
 </script>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 #app {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .v-btn {
@@ -45,10 +45,10 @@ body {
 #navbar {
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  width: 90%;
+  width: 100%;
   top: 0;
-  left: 195px;
   z-index: 99;
+  margin-left: 195px;
 }
 
 #sidebar {
@@ -64,6 +64,6 @@ body {
 
 .v-main {
   background-color: #e1e5e7;
-  height: 100vh;
+  height: 100%;
 }
 </style>
