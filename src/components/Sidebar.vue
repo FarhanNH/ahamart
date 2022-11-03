@@ -1,5 +1,5 @@
 <template>
-  <v-card max-width="250" height="100vh">
+  <v-card outlined color="white" max-width="250" height="100vh">
     <v-card-title>
       <v-img :src="logoPath" contain max-height="40" max-width="90"></v-img>
     </v-card-title>
@@ -15,7 +15,10 @@
       >
         <template v-slot:activator>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title"></v-list-item-title>
+            <v-list-item-title
+              v-text="item.title"
+              class="font-weight-bold"
+            ></v-list-item-title>
           </v-list-item-content>
         </template>
 

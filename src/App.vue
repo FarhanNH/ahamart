@@ -1,17 +1,15 @@
 <template>
   <v-app>
-    <div row id="navbar">
-      <Navbar />
-    </div>
-    <sidebar />
+    <Navbar id="navbar" />
+    <sidebar id="sidebar" />
     <v-main>
-      <HelloWorld />
+      <Content id="content" />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Content from "./components/Content";
 import Navbar from "./components/Navbar.vue";
 import Sidebar from "./components/Sidebar.vue";
 
@@ -19,7 +17,7 @@ export default {
   name: "App",
 
   components: {
-    HelloWorld,
+    Content,
     Sidebar,
     Navbar,
   },
@@ -30,13 +28,42 @@ export default {
 };
 </script>
 <style>
-#navbar {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 250px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html,
+body {
+  font-family: "Poppins", sans-serif;
 }
+
+#app {
+  font-family: "Poppins", sans-serif;
+}
+
+.v-btn {
+  text-transform: unset !important;
+}
+
+#navbar {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  width: 90%;
+  top: 0;
+  left: 195px;
+  z-index: 99;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#content {
+  margin: 50px 100px 0 250px;
+}
+
 .v-main {
-  background-color: #f5f8fa;
+  background-color: #e1e5e7;
+  height: 100vh;
 }
 </style>

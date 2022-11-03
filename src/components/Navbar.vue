@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card outlined color="white">
     <v-row>
       <v-col md="4" class="pb-0">
         <div class="d-flex ml-5 mt-5">
@@ -16,7 +16,7 @@
       </v-col>
       <v-col md="6" class="pb-0">
         <div class="d-flex justify-end mt-1">
-          <v-list dense width="230" max-width="230">
+          <v-list dense width="250" max-width="250">
             <v-list-group
               v-for="item in items"
               :key="item.title"
@@ -26,7 +26,10 @@
               <template v-slot:activator>
                 <div slot="prependIcon" id="customIcon">DC</div>
                 <v-list-item-content>
-                  <v-list-item-title v-text="item.title"> </v-list-item-title>
+                  <v-list-item-title
+                    v-text="item.title"
+                    class="font-weight-bold"
+                  ></v-list-item-title>
                   <v-list-item-subtitle
                     v-text="item.subtitle"
                   ></v-list-item-subtitle>
