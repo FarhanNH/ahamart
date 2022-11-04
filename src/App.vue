@@ -2,6 +2,7 @@
   <v-app>
     <Navbar id="navbar" />
     <sidebar id="sidebar" />
+    <v-btn id="openBtn" @click="showSidebar"></v-btn>
     <v-main>
       <Content id="content" />
     </v-main>
@@ -9,12 +10,12 @@
 </template>
 
 <script>
-import Content from "./components/Content";
-import Navbar from "./components/Navbar.vue";
-import Sidebar from "./components/Sidebar.vue";
+import Content from './components/Content';
+import Navbar from './components/Navbar.vue';
+import Sidebar from './components/Sidebar.vue';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     Content,
@@ -25,46 +26,13 @@ export default {
   data: () => ({
     //
   }),
+  methods: {
+    showSidebar() {
+      document.getElementById('sidebar').style.left = '0';
+    },
+  },
 };
 </script>
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-html,
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-#app {
-  font-family: "Poppins", sans-serif;
-}
-
-.v-btn {
-  text-transform: unset !important;
-}
-
-#navbar {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  width: 100%;
-  top: 0;
-  z-index: 99;
-  padding-left: 13.5rem;
-}
-
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-}
-
-#content {
-  margin: 50px 100px 0 250px;
-}
-
-.v-main {
-  background-color: #e1e5e7;
-  width: 100%;
-  height: 100%;
-}
+<style lang="scss">
+@import '@/assets/scss/style';
 </style>

@@ -3,36 +3,19 @@
     <v-row>
       <v-col md="4" class="pb-0">
         <div class="d-flex ml-5 mt-5">
-          <v-text-field
-            label="Search"
-            prepend-inner-icon="mdi-magnify"
-            outlined
-            dense
-          ></v-text-field>
-          <v-btn height="40" class="ml-2" dark depressed color="#0095E8"
-            >Cari</v-btn
-          >
+          <v-text-field label="Search" prepend-inner-icon="mdi-magnify" outlined dense></v-text-field>
+          <v-btn height="40" class="ml-2" dark depressed color="#0095E8">Cari</v-btn>
         </div>
       </v-col>
       <v-col md="8" class="containerNav">
         <div class="navAccount">
           <v-list dense width="250" max-width="250">
-            <v-list-group
-              v-for="item in items"
-              :key="item.title"
-              v-model="item.active"
-              no-action
-            >
+            <v-list-group v-for="item in items" :key="item.title" v-model="item.active" no-action>
               <template v-slot:activator>
                 <div slot="prependIcon" id="customIcon">DC</div>
                 <v-list-item-content>
-                  <v-list-item-title
-                    v-text="item.title"
-                    class="font-weight-bold"
-                  ></v-list-item-title>
-                  <v-list-item-subtitle
-                    v-text="item.subtitle"
-                  ></v-list-item-subtitle>
+                  <v-list-item-title v-text="item.title" class="font-weight-bold"></v-list-item-title>
+                  <v-list-item-subtitle v-text="item.subtitle"></v-list-item-subtitle>
                 </v-list-item-content>
               </template>
 
@@ -54,9 +37,9 @@ export default {
   data: () => ({
     items: [
       {
-        items: [{ title: "Setttings" }, { title: "Logout" }],
-        title: "Dane Cooper",
-        subtitle: "Super Admin",
+        items: [{ title: 'Setttings' }, { title: 'Logout' }],
+        title: 'Dane Cooper',
+        subtitle: 'Super Admin',
       },
     ],
   }),

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#app {
+  font-family: 'Poppins', sans-serif;
+}
+
+.v-btn {
+  text-transform: unset !important;
+}
+
+#openBtn {
+  display: none;
+}
+
+#closeBtn {
+  display: none;
+}
+
+#navbar {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  padding-left: 13.5rem;
+}
+
+#sidebar {
+  // display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#content {
+  margin: 50px 100px 0 250px;
+}
+
+.v-main {
+  background-color: #e1e5e7;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  #openBtn {
+    display: block;
+    position: fixed;
+    background-color: hsla(0, 0%, 53%, 0.788);
+    height: 25%;
+    min-width: 0.5rem;
+    padding: 0;
+    top: 50%;
+    left: 0.75rem;
+    z-index: 98;
+    transform: translateY(-50%);
+  }
+
+  #navbar {
+    display: none;
+    padding-left: 0;
+    label {
+      display: none;
+    }
+    .containerNav {
+      .navAccount {
+        // width: 50%;
+        right: 0;
+        display: none;
+      }
+    }
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    // left: 0;
+    left: -200px;
+    height: 100% !important;
+    z-index: 99;
+    transition: 0.3s;
+
+    #closeBtn {
+      display: block;
+      border-radius: 50%;
+      min-width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      margin: 1rem 0 0 4.5rem;
+      font-weight: bold;
+      font-size: 1.25rem;
+      background-color: hsla(0, 80%, 52%, 0.788);
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  #content {
+    margin: 2rem 1.25rem 2rem 3rem;
+  }
+  #topContent2 {
+    display: flex;
+    flex-direction: column;
+    .content-2 {
+      margin-left: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    .content-3 {
+      margin-left: 0;
+    }
+    .year-jumlah-outlet {
+      width: 30%;
+    }
+  }
+}
